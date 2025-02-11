@@ -1,0 +1,9 @@
+[build]
+  base = "/frontend"  # Set this to the folder containing your package.json
+  publish = "dist"    # Set this to the folder containing your built files
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

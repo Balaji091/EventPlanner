@@ -49,7 +49,7 @@ const Login = () => {
             if (response.data.success) {
                 Cookies.set("authenticated",response.data.user_id);
                 toast.success("Login successful! Redirecting...");
-                setTimeout(() => navigate("/home"), 2000);
+                setTimeout(() => navigate("/"), 2000);
             }
         } catch (error) {
             toast.error(error.response?.data?.message || "Invalid credentials, please try again.");
