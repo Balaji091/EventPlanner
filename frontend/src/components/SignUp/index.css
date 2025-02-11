@@ -1,0 +1,115 @@
+.sign-up-form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .login-signup-web-logo{
+    width: 150px;
+    margin-bottom: 20px
+  }
+  .signup-login-input-total{
+    display: flex;
+    flex-direction: column;
+    max-height: 70px;
+    width: 100%;
+    gap: 0;
+  }
+  .login-signup-question{
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  .login-signup-field-error{
+    color: #ff0b37;
+    font-size: 12px;
+  }
+  .sign-up-heading{
+      color:black;
+      font-size:16px;
+      font-weight:bold;
+
+  }
+  .submit-error-block{
+    width: 100%;
+  }
+  .sign-up-btn{
+    margin-top: 20px;
+
+    width: 100%;
+    padding: 10px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  .sign-up-input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px
+    }
+    .sign-up-description{
+        font-size: 14px;
+        color: #666;
+        margin-top: 10px;
+      
+    }
+    .sign-up-description span{
+        color: #6200ea;
+        cursor: pointer;
+        font-weight: bold;
+  
+    }
+   
+    
+  .fill-this-field{
+    border: 1px solid #ff0b37;
+  }
+  
+  
+    @media screen and (max-width:576px){
+      .sign-up-form-container{
+          width:80%;
+  
+      }
+      .sign-up-heading{
+          font-size:28px;
+      }
+  
+    }
+    .sign-up-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+  }
+  
+  .spinner {
+      width: 18px;
+      height: 18px;
+      border: 2px solid white;
+      border-top-color: transparent;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+  }
+  
+  @keyframes spin {
+      to {
+          transform: rotate(360deg);
+      }
+  }
+  

@@ -1,0 +1,148 @@
+/* General Styles */
+.container {
+    padding: 0px;
+    
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    background: white;
+    
+}
+
+/* Center Form on Desktop */
+@media (min-width: 768px) {
+    .container {
+        margin: 50px auto;
+        max-width: 500px;
+    }
+}
+
+/* Header Title */
+.header-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #9502FB;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Styling */
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.form-input:focus {
+    border-color: #9502FB;
+    box-shadow: 0 0 5px rgba(149, 2, 251, 0.4);
+    outline: none;
+}
+
+/* Date and Time Fields in Separate Rows */
+@media (min-width: 768px) {
+    .form-group.date-time {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form-group.date-time > div {
+        width: 48%;
+    }
+}
+
+/* File Input */
+input[type="file"] {
+    border: none;
+    font-size: 14px;
+}
+
+/* Button */
+.register-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #9502FB, #7200C8);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.register-button:hover {
+    background: linear-gradient(135deg, #7200C8, #9502FB);
+    transform: scale(1.05);
+}
+
+/* Custom Styling for Time Input Icon */
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(50%) sepia(100%) saturate(200%) hue-rotate(200deg);
+    cursor: pointer;
+    background: none;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 640px) {
+    .container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .header-title {
+        font-size: 1.6rem;
+    }
+
+    .form-group {
+        gap: 0.3rem;
+    }
+
+    .register-button {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent blur effect */
+    backdrop-filter: blur(5px); /* Apply blur effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

@@ -1,0 +1,107 @@
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: filter 0.3s ease-in-out;
+}
+
+.login-page.blurred {
+    filter: blur(3px);
+    pointer-events: none;
+}
+
+/* Login Form Container */
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Styling */
+.login-web-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.login-input-total {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.login-question {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.login-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.login-input:focus {
+    border-color: #6200ea;
+    box-shadow: 0px 0px 5px rgba(98, 0, 234, 0.5);
+    outline: none;
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #6200ea, #4500b5);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #4500b5, #6200ea);
+    transform: scale(1.05);
+}
+
+.login-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.loader {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #6200ea;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.span-signup{
+    color: rgb(6, 176, 228);
+}
+.span-signup:hover{
+    color: #4500b5;
+}

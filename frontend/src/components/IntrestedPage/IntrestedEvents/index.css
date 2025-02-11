@@ -1,0 +1,73 @@
+/* Main container */
+.interested-events-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+  }
+  
+  /* Grid layout for events */      
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Wrapper for each event */
+  .event-card-wrapper {
+    background: white;
+   
+    border-radius: 10px;
+   
+  }
+  
+  
+  
+  /* Not Interested button */
+  .not-interested-btn {
+    display: block;
+    width: 100px;
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background:purple;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .not-interested-btn:hover {
+    background: #cc0000;
+  }
+  
+  /* No events message */
+  .no-events {
+    font-size: 18px;
+    color: #777;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 20px;
+    }
+    
+    .events-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

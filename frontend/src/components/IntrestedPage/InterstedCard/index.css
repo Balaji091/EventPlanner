@@ -1,0 +1,103 @@
+/* Interested Event Card Container */
+.interested-card-container {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
+    width: 380px;
+    height: 330px;
+    position: relative;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect */
+  .interested-card-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 578px) {
+    .interested-card-container {
+      width: 100%;
+    }
+  }
+  
+  /* Event Image */
+  .interested-card-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  
+  /* Event Content */
+  .interested-card-content {
+    padding: 10px;
+  }
+  
+  /* Event Title */
+  .interested-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+  }
+  
+  /* Event Date & Time */
+  .interested-card-date {
+    font-size: 15px;
+    color: #7a02c4;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  /* Event Location */
+  .interested-card-location {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: black;
+  }
+  
+  /* Location Icon */
+  .interested-card-icon {
+    font-size: 20px;
+    margin-right: 8px;
+    color: #7a02c4;
+  }
+  
+  /* Venue Text */
+  .interested-card-venue {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  /* Remove Button */
+  .remove-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #7a02c4;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .remove-btn:hover {
+    background-color: #5a0196;
+  }
+  
+  /* Remove Icon */
+  .remove-icon {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  

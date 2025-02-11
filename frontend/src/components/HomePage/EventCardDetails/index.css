@@ -1,0 +1,124 @@
+.event-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.event-details-bottom-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.event-details-image {
+    width: 55%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.event-info-container {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.event-name {
+    color: #5e1ea6;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.event-details-date-time,
+.event-details-venue {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #3c156b;
+}
+
+.event-icon {
+    color: #7a1cc5;
+    font-size: 22px;
+}
+
+.event-description {
+    font-size: 16px;
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.event-actions {
+    margin-top: 10px;
+}
+
+.interest-btn {
+    display: flex;
+  
+    background: #5e1ea6;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.interest-btn:hover {
+    background: #3c156b;
+    transform: scale(1.05);
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .event-details-bottom-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .event-details-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .event-info-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .event-name {
+        font-size: 22px;
+    }
+
+    .event-details-date-time,
+    .event-details-venue {
+        font-size: 16px;
+    }
+
+    .event-description {
+        font-size: 14px;
+    }
+}
