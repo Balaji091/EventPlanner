@@ -19,7 +19,7 @@ const EventDetails = () => {
     const fetchEventDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5001/event/details/${event_id}`,
+          `${process.env.REACT_APP_API_URL}/event/details/${event_id}`,
           { withCredentials: true }
         );
         const eventData = response.data.event;
@@ -61,7 +61,7 @@ const EventDetails = () => {
       }
   
       await axios.put(
-        `http://localhost:5001/event/update/${event_id}`,
+        `${process.env.REACT_APP_API_URL}/event/update/${event_id}`,
         formData,
         { 
           withCredentials: true,
@@ -77,7 +77,7 @@ const EventDetails = () => {
   const handleDelete = async () => {
     try {
       await axios.delete(
-        `http://localhost:5001/event/delete/${event_id}`,
+        `${process.env.REACT_APP_API_URL}/event/delete/${event_id}`,
         { withCredentials: true }
       );
       toast.success("Event deleted successfully");

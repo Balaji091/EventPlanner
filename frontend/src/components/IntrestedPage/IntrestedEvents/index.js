@@ -10,7 +10,7 @@ const InterestedEvents = () => {
   useEffect(() => {
     const fetchInterestedEvents = async () => {
       try {
-        const response = await fetch("http://localhost:5001/favoured/interested-events", {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/favoured/interested-events`, {
           method: "GET",
           credentials: "include",
         });
@@ -30,7 +30,7 @@ const InterestedEvents = () => {
   // Function to unmark interest
   const handleUnmarkInterest = async (eventId) => {
     try {
-      const response = await fetch(`http://localhost:5001/favoured/${eventId}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/favoured/${eventId}`, {
         method: "DELETE",
         credentials: "include",
       });

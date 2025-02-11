@@ -15,10 +15,10 @@ export default function EventEDashboard() {
     const fetchEvents = async () => {
       try {
         setLoading(true);
-        let endpoint = "http://localhost:5001/dashboard/all-events";
-        if (activeTab === "Live") endpoint = "http://localhost:5001/dashboard/ongoing-events";
-        if (activeTab === "Completed") endpoint = "http://localhost:5001/dashboard/completed-events";
-        if (activeTab === "Upcoming") endpoint = "http://localhost:5001/dashboard/upcoming-events";
+        let endpoint = `${process.env.REACT_APP_API_URL}/dashboard/all-events`;
+        if (activeTab === "Live") endpoint = `${process.env.REACT_APP_API_URL}/dashboard/ongoing-events`;
+        if (activeTab === "Completed") endpoint = `${process.env.REACT_APP_API_URL}/dashboard/completed-events`;
+        if (activeTab === "Upcoming") endpoint =  `${process.env.REACT_APP_API_URL}/dashboard/upcoming-events`;
 
         const response = await fetch(endpoint, { credentials: "include" });
         const data = await response.json();

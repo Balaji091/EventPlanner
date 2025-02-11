@@ -6,10 +6,10 @@ import Options from "../Options";
 import "./index.css";
 
 const API_URLS = {
-  all: "http://localhost:5001/home/all-events",
-  upcoming: "http://localhost:5001/home/upcoming-events",
-  live: "http://localhost:5001/home/ongoing-events",
-  past: "http://localhost:5001/home/completed-events",
+  all: `${process.env.REACT_APP_API_URL}/home/all-events`,
+  upcoming: `${process.env.REACT_APP_API_URL}/home/upcoming-events`,
+  live: `${process.env.REACT_APP_API_URL}/home/ongoing-events`,
+  past: `${process.env.REACT_APP_API_URL}/home/completed-events`,
 };
 
 const EventCardList = () => {

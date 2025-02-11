@@ -44,7 +44,7 @@ const Login = () => {
         setLoading(true);
 
         try {
-            const response = await axios.post("http://localhost:5001/auth/login", formData, { withCredentials: true });
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/login`, formData, { withCredentials: true });
 
             if (response.data.success) {
                 Cookies.set("authenticated",response.data.user_id);

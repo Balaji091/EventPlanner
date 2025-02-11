@@ -32,7 +32,7 @@ export default function AddEvent() {
     formData.append("image", eventPic);
 
     try {
-      const response = await fetch("http://localhost:5001/event/register", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/event/register`, {
         method: "POST",
         body: formData,
         credentials: "include"  

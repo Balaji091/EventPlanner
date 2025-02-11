@@ -17,7 +17,7 @@
     useEffect(() => {
       const fetchEventDetails = async () => {
         try {
-          const response = await fetch(`http://localhost:5001/home/events/${event_id}`);
+          const response = await fetch(`${process.env.REACT_APP_API_URL}/home/events/${event_id}`);
           if (!response.ok) {
             throw new Error(`Error: ${response.status} ${response.statusText}`);
           }
@@ -35,7 +35,7 @@
 
     const handleInterestedClick = async () => {
       try {
-        const response = await fetch(`http://localhost:5001/favoured/${event_id}`, {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/favoured/${event_id}`, {
           method: "POST",
           credentials:"include"
         });

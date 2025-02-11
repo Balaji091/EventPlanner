@@ -25,7 +25,7 @@ const Header = () => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await axios.get("http://localhost:5001/auth/user", { withCredentials: true });
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/auth/user`, { withCredentials: true });
                 setUserEmail(response.data.email);
             } catch (error) {
                 console.error("Error fetching user details:", error);
@@ -59,7 +59,7 @@ const Header = () => {
 
     const fetchUnreadCount = async () => {
         try {
-            const response = await axios.get(`http://localhost:5001/notifications/users/unread-count`, { withCredentials: true });
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/notifications/users/unread-count`, { withCredentials: true });
             setUnreadCount(response.data.unreadCount);
         } catch (error) {
             console.error("Error fetching unread notifications count:", error);
@@ -68,7 +68,7 @@ const Header = () => {
 
     const readMessages = async () => {
         try {
-            const response = await axios.get(`http://localhost:5001/notifications/read`, { withCredentials: true });
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/notifications/read`, { withCredentials: true });
             fetchUnreadCount()
         } catch (error) {
             console.error("Error fetching unread notifications count:", error);
@@ -78,7 +78,7 @@ const Header = () => {
 
     const fetchAllNotifications = async () => {
         try {
-            const response = await axios.get("http://localhost:5001/notifications/users/notifications", { withCredentials: true });
+            const response = await axios.get( `${process.env.REACT_APP_API_URL}/notifications/users/notifications`, { withCredentials: true });
             setNotifications(response.data.notifications);
         } catch (error) {
             console.error("Error fetching notifications:", error);
@@ -101,7 +101,7 @@ const Header = () => {
 
     const handleLogout = async () => {
         try {
-            await axios.get("http://localhost:5001/auth/logout", { withCredentials: true });
+            await axios.get( `${process.env.REACT_APP_API_URL}/auth/logout`, { withCredentials: true });
             toast.success("Logged out successfully!");
             Cookies.remove("authenticated");
             setTimeout(() => navigate("/login"), 1500);

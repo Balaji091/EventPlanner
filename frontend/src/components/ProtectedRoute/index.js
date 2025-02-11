@@ -7,7 +7,7 @@ const ProtectedRoute = () => {
   useEffect(() => {
     const verifyUser = async () => {
       try {
-        const response = await fetch("http://localhost:5001/auth/verify", {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/auth/verify`, {
           method: "GET",
           credentials: "include", // Send cookies with request
           headers: {

@@ -49,7 +49,7 @@ export default function LiveRoom() {
     const verifyOwner = async () => {
       try {
         // Await the axios request to resolve
-        const res = await axios.get(`http://localhost:5001/live-event/verify-owner/${event_id}`, { withCredentials: true });
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/live-event/verify-owner/${event_id}`, { withCredentials: true });
 
         // Check the response status and handle it accordingly
         if (res.status === 200) {
@@ -73,7 +73,7 @@ export default function LiveRoom() {
 
   const fetchEventDetails = async () => {
     try {
-      const response = await fetch(`http://localhost:5001/home/events/${event_id}`);
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/home/events/${event_id}`);
       if (!response.ok) {
         throw new Error(`Error: ${response.status} ${response.statusText}`);
       }
@@ -88,9 +88,9 @@ export default function LiveRoom() {
   const handleStart = async () => {
     try {
       const [istarted, send_notifications] = await Promise.all([
-        axios.get(`http://localhost:5001/live-event/start-event/${event_id}`, { withCredentials: true }),
+        axios.get(`${process.env.REACT_APP_API_URL}/live-event/start-event/${event_id}`, { withCredentials: true }),
         axios.post(
-          `http://localhost:5001/notifications/send/${event_id}`,
+          `${process.env.REACT_APP_API_URL}/notifications/send/${event_id}`,
           { message: `${event.name} is started. Go watch live.` },
           {
             headers: { "Content-Type": "application/json" },
@@ -113,7 +113,7 @@ export default function LiveRoom() {
   const handleEnd = async () => {
     try {
       const response = await axios.post(
-      `http://localhost:5001/live-event/end-event/${event_id}`,
+      `${process.env.REACT_APP_API_URL}/live-event/end-event/${event_id}`,
       { uniq_viewers: uniqueViews}, // Adding the body
       { withCredentials: true } // Ensuring credentials are included
     );
